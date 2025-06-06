@@ -5,7 +5,6 @@ class Question {
     protected String questionText;
     protected String[] options;
     protected int correctIndex;
-
     public Question(String questionText, String[] options, int correctIndex) {
         this.questionText = questionText;
         this.options = options;
