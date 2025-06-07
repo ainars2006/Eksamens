@@ -138,9 +138,19 @@ public class Tests {
             }
         }
 
+        String gradingMessage;
+        if (score >= 9) {
+            gradingMessage = "Izcili";
+        } else if (score >= 5) {
+            gradingMessage = "Ieskaitīts";
+        } else {
+            gradingMessage = "Nav ieskaitīts";
+        }
+
         int viewResults = JOptionPane.showOptionDialog(
                 null,
-                "Tests pabeigts!\nPareizo atbilžu skaits: " + score + " no " + questions.size(),
+                "Tests pabeigts!\nPareizo atbilžu skaits: " + score + " no " + questions.size() +
+                        "\nRezultāts: " + gradingMessage,
                 "Rezultāts",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.INFORMATION_MESSAGE,
@@ -148,7 +158,6 @@ public class Tests {
                 new String[]{"Rezultātu saraksts", "Aizvērt"},
                 "Rezultātu saraksts"
         );
-
         if (viewResults == JOptionPane.YES_OPTION && !results.isEmpty()) {
             JTextArea textArea = new JTextArea();
             textArea.setText(String.join("\n", results));
