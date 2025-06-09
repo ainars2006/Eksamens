@@ -167,7 +167,7 @@ public class Tests {
 
             JOptionPane.showMessageDialog(null, scrollPane, "Nepareizās atbildes", JOptionPane.INFORMATION_MESSAGE);
         } else if (results.isEmpty() && viewResults == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "🎉 Visi jautājumi atbildēti pareizi!", "Rezultāts", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Visi jautājumi atbildēti pareizi!", "Rezultāts", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }
