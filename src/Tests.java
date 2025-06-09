@@ -27,6 +27,7 @@ class Question {
         return correctIndex;
     }
 }
+
 class MultipleChoiceQuestion extends Question {
     public MultipleChoiceQuestion(String questionText, String[] options, int correctIndex) {
         super(questionText, options, correctIndex);
@@ -36,6 +37,10 @@ class MultipleChoiceQuestion extends Question {
 public class Tests {
 
     public static void main(String[] args) {
+        UIManager.put("OptionPane.background", new java.awt.Color(173, 216, 230));
+        UIManager.put("Panel.background", new java.awt.Color(173, 216, 230));
+        UIManager.put("OptionPane.messageForeground", java.awt.Color.BLACK);
+
         while (true) {
             String[] options = {"Pildīt testu", "Aizvērt"};
             int choice = JOptionPane.showOptionDialog(
